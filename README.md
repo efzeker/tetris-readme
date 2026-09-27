@@ -6,7 +6,7 @@
     b. Se deben enumerar idealmente asimilando con una escala nominal estilo label
         . → Para ello resulta realmente útil la función Enum contenida en el package enum.
         Una vez definidos los 4 movimientos posibles de la pieza (Right, Left, Down, ROTATE), proseguimos con...
-#               **** PARA LLAMAR A NUESTRA FUNCIÓN ENUM, DEBEMOS PRIMERA Y OBLIGATORIAMENTE, DEFINIR *movement (Enum) DENTRO DE UNA &{#CLASS.{
+#               **** PARA LLAMAR A NUESTRA FUNCIÓN ENUM, DEBEMOS PRIMERA Y OBLIGATORIAMENTE, DEFINIR *movement (Enum) DENTRO DE UNA CLASS
 
 
 # 2. Debemos definir cuál será el workspace de tetris
@@ -67,7 +67,7 @@
 5. Luego, tenemos que definir nuestro new_screen, el cual constará de la misma matriz, extirpándole la figura tetris.
                                           new_screen = [["🔲"] * 10 for _ in range(10)]
                                           
-# 5.1. Junto a tal definición, debemos considerar definir como se moverá la figura dentro del screen() →→→☻6 
+# 5.1. Junto a tal definición, debemos considerar definir como se moverá la figura dentro del screen() →→→☻7 
         i. Inicialmente será solo para abajo.
                                         screen=move_piece(screen, movement.DOWN)
 
@@ -411,12 +411,8 @@ print_screen(screen)
 
 
 
-# DUDA
-
-# Estoy haciendo un backtracking, y necesito encontrar el [NewIndexFila (Y function)] = [Valor de la fila en que me encuentro posicionado][0: creo que es por la matriz nula, me corriges si me equivoco][0: si es fila, 1: si es columna, me corriges si me equivoco)]
-
 # CONTEXTO:
-# Programación de tetri, definiendo la función rotate (le aporta un elemento de tridimensionalidad al programa, más alla de moverme entre los elementos de las listas para filas y entre los elementos de la cadena  para las columnas
+# Programación de tetris, definiendo la función rotate (le aporta un elemento de tridimensionalidad al programa, más alla de moverme entre los elementos de las listas para filas y entre los elementos de la cadena  para las columnas
 
                     case movement.ROTATE:
                         new_row_index = row_index + rotations[rotation_item][0]
